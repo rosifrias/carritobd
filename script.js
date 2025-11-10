@@ -1,5 +1,5 @@
 // ✅ URL de tu Google Sheets (formato CSV)
-const SHEET_URL = "https://docs.google.com/spreadsheets/d/1U_TpXGf_20-Z4fIP_RCNrZFZi3qjyITw5HkMaylrQHE/export?format=csv&gid=0";
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/163ElYHKNaS-mNXVLdvOWDurRFSMsaWj1tCBmSHxHcfI/edit?usp=sharing";
 
 // ✅ Variables globales
 let cart = [];
@@ -249,4 +249,5 @@ window.addEventListener("DOMContentLoaded", () => {
   cargarProductosDesdeSheet();
   cargarCarrito();
 });
+
 

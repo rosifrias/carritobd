@@ -1,0 +1,225 @@
+/* Ajuste del logo y tamaño de imagen */
+.logo {  
+  background-color: #ffcc00; /* Color de la franja */
+  height: 60px;              /* Altura de la franja */
+  display: flex;             /* Centra el contenido dentro de la franja */
+  justify-content: center;   /* Centra horizontalmente */
+  align-items: center;       /* Centra verticalmente */
+  position: relative;        /* Si necesitas que algo salga de la franja */
+}
+
+.logo img {
+  width: auto;
+  height: 60px;         /* Mantiene consistencia visual */
+  max-width: 100%;      /* Evita que se desborde */
+}
+
+
+/* Ajuste del mapa */
+#map {
+    width: 100%;
+   height: 300px;
+   margin-top: 20px; /* Puedes ajustar según lo necesites */
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+
+.header-info {
+   position: relative;
+  z-index: 1;
+}
+    
+
+.header-info::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Capa oscura */
+  z-index: -1;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-name {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.product-description {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    flex-shrink: 0;
+     width: 100px;
+  height: auto;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el botón de eliminar */
+.button-remove {
+    background-color: #dc3545; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 3px 8px; /* Espaciado interno */
+    cursor: pointer; /* Cursor de mano */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 12px; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+.button-remove:hover {
+    background-color: #c82333; /* Color de fondo más oscuro al pasar el mouse */
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .product-name, .product-description, button {
+        margin: 5px 0;
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Media Queries para dispositivos medianos (tabletas) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        padding: 15px;
+    }
+
+    li {
+        flex-direction: row;
+    }
+
+    .product-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .product-name, .product-description, button {
+        margin: 8px 0;
+    }
+
+    button {
+        width: auto;
+        margin-left: 10px;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+  li {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+#floating-cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.quantity-control input {
+  width: 40px;
+  text-align: center;
+  padding: 5px;
+}

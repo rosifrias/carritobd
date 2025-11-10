@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carrito de Compras - Restaurante de Hamburguesas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header>
+    <a href="#home" class="logo">
+        <img src="img/logosinfondo.png" alt="Logo del Sitio" class="logo" />
+    </a>
+
+    <div id="header-info">
+        <p><strong>Nuestra dirección:</strong> Portal Centro Nivel 3, Maule-Talca</p>
+        <p><strong>Horario:</strong> Lunes a sábado, 9:00 AM - 8:00 PM y domingos de 9:00 AM - 7:00 PM </p>
+        <p><strong>Estado:</strong> <span id="estado"></span></p>
+        <a href="https://www.instagram.com/krandy.restobar?igsh=MThxZmw3bTJvdjM0eQ==" target="_blank">Instagram</a>
+    </div>
+</header>
+
+<div id="floating-cart">
+    🛒 <span id="floating-count">0</span>
+</div>
+
+<h1>Menú kRandy Resto Bar</h1>
+
+<hr />
+
+<ul id="menu"></ul>
+
+
+
+<hr />
+
+<h2>Carrito de Compras</h2>
+<ul id="cart"></ul>
+<p>Total: <span id="total">0</span></p>
+<button id="sendOrder" disabled>Enviar Pedido por WhatsApp</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
